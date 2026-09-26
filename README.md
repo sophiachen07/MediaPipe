@@ -1,80 +1,70 @@
-# 🔮 Trippy Hand Tracker 2.0 - 迷幻手部追蹤與多模式視覺特效系統
+# 🔮 Trippy Hand Tracker - 迷幻風格手部追蹤與物理發光粒子系統
 
-一個基於 **OpenCV** 與 **MediaPipe Hands** 開發的次世代手部追蹤視覺特效系統。結合了**平滑霓虹雷射骨架**、**空間扭曲蟲洞**、**手勢互動宇宙發散**與**奇異博士/鋼鐵人 掌心旋轉全息魔法陣**。
-
----
-
-## 🌌 三大特色模式 (Three Signature Modes)
-
-### 1. 🌌 模式一：時空扭曲蟲洞風 (Space Warp & Liquid Distortion)
-- **手部引力透鏡**：手部關鍵節點與掌心化為時空黑洞與漩渦中心。
-- **液態空間扭曲**：背景畫面產生即時物理漩渦（Swirl）與徑向擠壓（Radial Lens）。
-- **色差分光 (Chromatic Aberration)**：邊緣具備 R/G/B 通道分離的迷幻光學色散效果。
-- **按鍵快捷鍵**：按鍵 `1`
-
-### 2. 🚀 模式二：手勢控制宇宙發散 (Gesture Cosmic Expansion)
-- **神聖幾何與超光速通道**：多層次動態旋轉神聖幾何通道與星塵粒子。
-- **手勢與時間速度無縫映射**：
-  - 🖐️ **張開手 (Open)**：速度乘數達 $1.6 \sim 2.6\times$，幾何與粒子如超空間躍遷般**高速向外爆發發散**。
-  - ✊ **半握 / 握緊 (Closing)**：速度平滑減緩至 $0.15 \sim 0.6\times$（**慢動作子彈時間**）。
-  - 👊 **握緊拳頭 (Fist)**：速度降為 $0.0\times$（**時間完全暫停凍結**），掌心凝聚發光晶體核心。
-- **按鍵快捷鍵**：按鍵 `2`
-
-### 3. ⚡ 模式三：奇異博士 / 鋼鐵人 掌心全息魔法陣 (Holo Arc Mandala)
-- **掌心精準定位 (Palm Center Tracking)**：鎖定手掌三角面核心（節點 0、5、17 幾何質心）。
-- **多層旋轉魔法陣**：
-  - 外層：順時針旋轉古符文齒輪刻度環。
-  - 中層：逆時針旋轉八芒星幾何法陣（頂點發光法力節點）。
-  - 內層：鋼鐵人科技感 HUD 四象限儀表環與十字瞄準線。
-  - 核心：掌心白熾超新星能量源，隨機發射高能電弧火花 (Arc Lightning)。
-- **觸發機制**：手掌張開時自動展開擴大，握拳時收斂為掌心微光。
-- **按鍵快捷鍵**：按鍵 `3`
+一個基於 **OpenCV** 與 **MediaPipe Hands** 開發的即時迷幻風格 (Trippy Visuals) 手部追蹤與 2D 物理發光粒子特效系統。
 
 ---
 
-## ✨ 視覺與物理系統特色
+## ✨ 核心特色 (Features)
 
-- **平滑霓虹雷射骨架 (Smooth Laser Glow)**：捨棄傳統抖動曲線，採用頂級平滑抗鋸齒雷射光束與同心呼吸光暈。
-- **食指物理粒子系統 (Physics Particle System)**：食指尖端（節點 8）支援重力、慣性加速度、空氣阻力與混沌擾動。
-- **時空殘影緩衝區 (Feedback Warp Buffer)**：微量向外擴散與透明度衰減，營造視覺殘影。
+1. **即時手部追蹤 (Real-time Hand Tracking)**
+   - 跨版本相容 MediaPipe Tasks API (Python 3.12 / 3.13+) 與經典 Solutions API。
+   - 21 個手部關節點精準定位，支援雙手同時追蹤。
+   - 水平鏡像翻轉，操作手感自然直覺。
+
+2. **迷幻霓虹視覺 (Psychedelic Trippy Visuals)**
+   - **HSV 色彩動態循環**：節點與連線的顏色隨時間（幀數）進行霓虹色調輪轉。
+   - **多層同心光環 (Concentric Pulsating Orbs)**：關節點呈現多層發光同心圓與白熾發光核心，具備呼吸縮放效果。
+   - **正弦波碎形動態連線 (Sine Wave Harmonic Fractal Connections)**：捨棄傳統直線骨架，透過多重諧波正弦函數計算垂直振幅，呈現動態有機碎形感。
+   - **空間殘影回饋緩衝區 (Feedback Decay Buffer & Space Drift)**：利用微量空間旋轉放大與加權透明度衰減，產生視覺殘影與空間扭曲感。
+
+3. **物理發光粒子系統 (Physics-based Glowing Particle System)**
+   - **食指尖端發射器 (Landmark 8)**：以食指尖為發射源。
+   - **真實物理模擬**：
+     - 手指移動慣性加速度注入 (Velocity Injection)。
+     - 向下重力加速度 (Gravity)。
+     - 空氣阻力衰減 (Drag/Damping) 與混沌正弦擾動 (Turbulence)。
+   - **多層次 Neon Glow 發光漸層**：利用加權混色（`cv2.add`）模擬璀璨星塵光暈。
+
+4. **豐富的即時互動控制 (Interactive HUD & Hotkeys)**
+   - 包含即時 FPS、偵測手部數、粒子數與模式狀態顯示。
 
 ---
 
-## 🛠️ 安裝與快速啟動 (Quick Start)
+## 🛠️ 安裝方式 (Installation)
 
-### 1. 複製儲存庫
+### 1. 複製專案
 ```bash
 git clone https://github.com/sophiachen07/MediaPipe.git
 cd MediaPipe
 ```
 
 ### 2. 安裝相依套件
+建議在 Python 3.10+ 環境下執行：
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. 一鍵啟動
-- **Windows**：直接雙擊點擊 `run.bat`
-- **命令列**：
+---
+
+## 🚀 執行程式 (Run)
+
 ```bash
 python trippy_hand_tracker.py
 ```
+> **提示**：程式首次執行時會自動從 Google 官方下載 `hand_landmarker.task` 模型檔案（約 7.8 MB）。
 
 ---
 
-## 🎮 鍵盤操作指南 (Keyboard Controls)
+## 🎮 鍵盤快捷鍵 (Hotkeys)
 
 | 按鍵 | 功能說明 |
 | :---: | :--- |
-| **`1`** | 切換至 **模式 1：時空扭曲蟲洞風** |
-| **`2`** | 切換至 **模式 2：手勢控制宇宙發散 (張開快/握緊慢/握拳停)** |
-| **`3`** | 切換至 **模式 3：奇異博士/鋼鐵人 掌心旋轉魔法陣** |
-| **`TAB`** | 循環輪播切換模式 |
-| **`B`** | 切換 **純黑霓虹宇宙** 與 **鏡頭實景背景** |
-| **`P`** | 在食指尖端手動觸發 **超新星粒子爆發 (Burst)** |
-| **`C`** | 清空當前殘影緩衝區與所有粒子 |
-| **`S`** | 即時擷取當前高畫質畫面並儲存為 PNG |
 | **`Q`** / **`ESC`** | 退出程式 |
+| **`B`** | 切換 **純黑霓虹模式 (Dark Neon)** 與 **相機實景疊加模式 (Camera Blend)** |
+| **`T`** | 切換殘影強度（**Short** 輕度 / **Medium** 標準 / **Dreamy Long** 夢幻長光軌） |
+| **`P`** | 在食指尖端觸發 **超新星粒子爆發 (Supernova Burst)** |
+| **`C`** | 清除殘影緩衝區與所有在場粒子 |
+| **`S`** | 即時儲存當前畫面截圖至目錄 |
 
 ---
 
